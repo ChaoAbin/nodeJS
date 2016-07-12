@@ -1,0 +1,29 @@
+<html lang="en"> 
+<head>
+    <meta charset="utf-8">
+    <title>Express 1</title> 
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $.ajax({
+                url: 'getJson',
+                type: 'POST',
+                data: {},
+                error: function(xhr) {
+                    alert('Ajax request 發生錯誤');
+                },
+                success: function(data) {
+                    console.log(data);
+                }
+            });
+        });
+    </script>
+</head>
+    <body>
+        <div id="output"></div>
+        <div id="send">
+            <input type="text" id="data" size="100" /><br />
+            <input type="button" id="sendtext" value="Send Text" />
+        </div>
+    </body>
+</html>
